@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Event List</title>
+    <link rel="stylesheet" href="/static/css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin - Event List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for event in events %}
+                    <tr>
+                        <td>{{ event }}</td>
+                        <td><a href="{{ url_for('admin_event', event=event) }}">View Attendance</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="back-link" href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+</body>
+</html>

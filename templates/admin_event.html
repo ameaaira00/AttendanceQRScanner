@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - {{ event }}</title>
+    <link rel="stylesheet" href="/static/css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance for {{ event }}</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Participant Name</th>
+                    <th>Scan Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if scanned_participants %}
+                    {% for participant in scanned_participants %}
+                        <tr>
+                            <td>{{ participant[0] }}</td>
+                            <td>{{ participant[1] }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="2">No attendees scanned yet.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+        <a class="back-link" href="{{ url_for('admin_home') }}">Back to Admin Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan QR Code</title>
+    <link rel="stylesheet" href="/static/css/scan.css">
+    <link rel="stylesheet" href="/static/css/toast.css">
+    <script src="https://cdn.jsdelivr.net/npm/html5-qrcode/minified/html5-qrcode.min.js"></script>
+    <script src="/static/js/toast.js" defer></script>
+</head>
+<body>
+    <h1>Scan QR Code</h1>
+    <div id="reader" style="width:500px"></div>
+    <p>Scanned data: <span id="result"></span></p>
+
+    {% if message %}
+    <div id="toast" class="toast {% if success %}success{% else %}error{% endif %}">
+        {{ message }}
+    </div>
+    {% endif %}
+
+    <form id="scanForm" method="POST" style="display:none;">
+        <input type="hidden" id="scan_data" name="scan_data">
+    </form>
+
+    <script src="/static/js/scan.js"></script>
+
+    <br>
+    <a href="/">Back to Home</a> | <a href="/admin">Back to Admin</a>
+</body>
+</html>
