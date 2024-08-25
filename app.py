@@ -1,57 +1,39 @@
-import logging
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request
 import qrcode
 import io
-
+import base64
 
 app = Flask(__name__)
 
-logging.basicConfig(level=logging.DEBUG)
-
 
 @app.route("/")
-def index():
-    return render_template("generate.html")
+def home():
+    return render_template("index.html")
 
 
-# Generate QR code
-@app.route("/generate", methods=["POST"])
-def generate():
-    event = request.form.get("event")
-    name = request.form.get("name")
+@app.route("/generate/<event>", methods=["GET"])
+def show_form(event):
+    if event in ["Heads Monthly Meeting", "General SADP PYM Events"]:
+        return render_template("form.html", event=event)
+    else:
+        return render_template("inprogress.html")
 
-    app.logger.info(f"Event: {event}, Name: {name}")
 
-    if not event or not name:
-        app.logger.error("Error: Missing event or participant name")
-        return "Error: Missing event or participant name", 400
+@app.route("/generate/<event>", methods=["POST"])
+def generate(event):
+    name = request.form["name"]
+    data = f"Event: {event}, Participant: {name}"
+    img = qrcode.make(data)
 
-    data = f"Event: {event}\nParticipant: {name}"
-    app.logger.info(f"Generating QR code with data: {data}")
-
-    qr = qrcode.QRCode(
-        version=1,
-        error_correction=qrcode.constants.ERROR_CORRECT_L,
-        box_size=10,
-        border=4,
-    )
-    qr.add_data(data)
-    qr.make(fit=True)
-
-    img = qr.make_image(fill="black", back_color="white")
-
+    # Save generated QR code
     img_io = io.BytesIO()
     img.save(img_io, "PNG")
     img_io.seek(0)
 
-    app.logger.info("QR code generated successfully")
-    return send_file(img_io, mimetype="image/png")
+    # Encode QR code image to base64
+    qr_code_img = base64.b64encode(img_io.getvalue()).decode("utf-8")
 
-
-# Scan QR code
-@app.route("/scan")
-def scan():
-    return render_template("scan.html")
+    return render_template("result.html", qr_code_img=qr_code_img, event=event)
 
 
 if __name__ == "__main__":

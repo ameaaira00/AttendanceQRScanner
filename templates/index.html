@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SADP PYM Events</title> 
+    <link rel="stylesheet" href="/static/css/index.css">
+</head> 
+<body>
+    <div class="container">
+        <h1>Hi KaPYM!</h1>
+        <p>Excited kaming makasama ka sa mga PYM events!</p>
+        <form id="eventForm" method="post">
+            <label for="event">What are you signing up for?</label>
+            <select id="event" name="event" required>
+                <option value="Heads Monthly Meeting">Heads Monthly Meeting</option>
+                <option value="Monthly Youth Formation">Monthly Youth Formation</option>
+                <option value="Youth Assembly">Youth Assembly</option>
+                <option value="General SADP PYM Events">General SADP PYM Events</option>
+            </select><br><br>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <script>
+            document.getElementById('eventForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                var event = encodeURIComponent(document.getElementById('event').value);
+                window.location.href = '/generate/' + event;
+            });
+        </script>
+    </div>
+</body>
+</html>
