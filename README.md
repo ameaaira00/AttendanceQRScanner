@@ -13,10 +13,10 @@ This project was developed to streamline the registration process for our church
 
 ## Documentation
 `/` - Homepage
-<img src="<Documentations/Version 1/EAQC - 1 Homepage.jpg>" alt="Homepage" height="300">
+<img src="<Documentations/Version 1/EAQC - 1 Homepage.jpg>" alt="Homepage" height="50">
 
 `/event/<event>` - Event Sign-up
-<img src="<Documentations/Version 1/EAQC - 2 Signup.jpg>" alt="Event Sign-up" height="300">
+<img src="<Documentations/Version 1/EAQC - 2 Signup.jpg>" alt="Event Sign-up" height="50">
 
 After successful registration, the attendee receives a QR code.
 ![Generated QR](<Documentations/Version 1/EAQC - 3 Sucessfully Generated.jpg>)
