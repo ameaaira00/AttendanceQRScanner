@@ -12,25 +12,21 @@ This project was developed to streamline the registration process for our church
 - **Admin Dashboard:** Admins can view a list of events and see the attendees who were scanned at each event.
 
 ## Documentation
-`/` - Homepage.
-<img src="Documentations/Version 1/EAQC - 1 Homepage.jpg" alt="Homepage" width="300"/>
+User's View:
 
-`/event/<event>` - Event Sign-up Page.
-<img src="Documentations/Version 1/EAQC - 2 Signup.jpg" alt="Event Sign-up" width="300"/>
+| Path                           | Description                        | Image                                                             |
+|--------------------------------|------------------------------------|-------------------------------------------------------------------|
+| `/` - Homepage.                | Homepage                            | <img src="Documentations/Version 1/EAQC - 1 Homepage.jpg" alt="Homepage" width="300"/> |
+| `/event/<event>` - Event Sign-up Page. | Event Sign-up Page                 | <img src="Documentations/Version 1/EAQC - 2 Signup.jpg" alt="Event Sign-up" width="300"/> |
+| After successful registration, the attendee receives a QR code. | Generated QR Code                   | <img src="Documentations/Version 1/EAQC - 3 Sucessfully Generated.jpg" alt="Generated QR" width="300"/> |
 
-After successful registration, the attendee receives a QR code.
-<img src="Documentations/Version 1/EAQC - 3 Sucessfully Generated.jpg" alt="Generated QR" width="300"/>
+Organizer's View
+| Path                   | Description                                            | Image                                                                                       | Link                                                                                           |
+|------------------------|--------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| `/scan`                | Organizers can use the QR Code Scanner to record attendance. | ![Scan QR](Documentations/Version 1/EAQC - 4 Scan QR.png)                                 | [Watch the recording](https://drive.google.com/file/d/1Kvn_RkMkA3HMsbwoCneshM8K6XmsIWxa/view?usp=sharing) |
+| `/admin`               | Admin Dashboard to view event details and attendee scans. Note that this has still no admin authentication. | ![Admin Dashboard](Documentations/Version 1/EAQC - 5 Admin.png)                           |                                                                                                |
+| `/admin/<event>`       | Event attendance details.                            | ![Attendance](Documentations/Version 1/EAQC - 6 Admin Event Attendance.png)                |                                                                                                |
 
-`/scan` - Organizers can use the QR Code Scanner to record attendance.
-
-![Scan QR](<Documentations/Version 1/EAQC - 4 Scan QR.png>)
-[Watch the recording](https://drive.google.com/file/d/1Kvn_RkMkA3HMsbwoCneshM8K6XmsIWxa/view?usp=sharing)
-
-`/admin` - Admin Dashboard to view event details and attendee scans. Note that this has still no admin authentication.
-![Admin Dashboard](<Documentations/Version 1/EAQC - 5 Admin.png>)
-
-`/admin/<event>` - Event attendance details.
-![Attendance](<Documentations/Version 1/EAQC - 6 Admin Event Attendance.png>)
 
 ## Tools Used
 
