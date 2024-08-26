@@ -19,7 +19,11 @@ This project was developed to streamline the registration process for our church
 ![Event Sign-up](<Documentations/Version 1/EAQC - 2 Signup.jpg>)
 
 After successful registration, the attendee receives a QR code.
-![QR Code Generated](<Documentations/Version 1/EAQC - 3 Sucessfully Generated.jpg>)
+<video controls width="600">
+  <source src="https://drive.google.com/uc?id=1Kvn_RkMkA3HMsbwoCneshM8K6XmsIWxa" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 `/scan` - Organizers can use the QR Code Scanner to record attendance.
 <video controls src="Documentations/Version 1/EAQC - 4 Scan QR.mp4" title="Title"></video>
