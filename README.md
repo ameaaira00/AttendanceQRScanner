@@ -12,7 +12,7 @@ This project was developed to streamline the registration process for our church
 - **Admin Dashboard:** Admins can view a list of events and see the attendees who were scanned at each event.
 
 ## Documentation
-User's View:
+### User's View:
 
 | Path                           | Description                        | Image                                                             |
 |--------------------------------|------------------------------------|-------------------------------------------------------------------|
@@ -20,8 +20,7 @@ User's View:
 | `/event/<event>` - Event Sign-up Page. | Event Sign-up Page                 | <img src="Documentations/Version 1/EAQC - 2 Signup.jpg" alt="Event Sign-up" width="300"/> |
 | After successful registration, the attendee receives a QR code. | Generated QR Code                   | <img src="Documentations/Version 1/EAQC - 3 Sucessfully Generated.jpg" alt="Generated QR" width="300"/> |
 
-Organizer's View
-## Organizer's View
+### Organizer's View
 
 | Path            | Description                                                                                                      | Image                                                                                                         |
 |-----------------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
