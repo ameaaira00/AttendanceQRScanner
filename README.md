@@ -42,6 +42,26 @@ This project was developed to streamline the registration process for our church
 
 - **[Heroku](https://www.heroku.com/):** A cloud platform that enables deployment of web applications. It is used to host the application online. The app is deployed at https://attendanceqrcode-flask-app-9e2f6557c363.herokuapp.com/.
 
+
+## Learnings
+
+- **Flask's `url_for` Function**: Flask's `url_for` function is very helpful for generating URLs for static files and routes dynamically. It helps avoid hardcoding URLs, making your application more flexible and easier to maintain.
+
+- **Plain JavaScript, CSS, and HTML**: I used plain JavaScript, CSS, and HTML for this project, which was refreshing compared to using frameworks like React or Angular. It simplified the development process and allowed me to focus on core functionality.
+
+- **Vercel Deployment**: Vercel offers smooth deployment for various applications, but it doesn't support SQLite databases, which meant I couldn't use it for storing user data. I had to explore other options for database integration, hence Heroku.
+
+- **QR Code Library**: I discovered that there are existing libraries for generating QR codes, which saved me the effort of building this functionality from scratch.
+
+- **Free Deployment Sites**: There are free deployment platforms available that can be used for hosting applications. However, they may have limitations or specific requirements.
+
+- **GitHub Deployment**: GitHub itself does not support deploying Flask applications directly or managing databases. I needed to use a dedicated deployment service for that purpose.
+
+- **Heroku CLI Login**: To log in to Heroku using their CLI, I needed an API key due to a bug with their 2FA. This was necessary for accessing Heroku services through the command line.
+
+- **Dyno Management**: Before deploying the site, I needed to configure dyno settings. I opted to use basic dynos to avoid additional costs. The dyno type can be toggled as needed for scaling.
+
+
 ## Installation
 
 1. **Clone the Repository:**
