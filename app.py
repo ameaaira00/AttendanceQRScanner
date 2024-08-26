@@ -5,6 +5,7 @@ import io
 import base64
 from events import EventType
 
+
 app = Flask(__name__)
 
 
