@@ -13,15 +13,16 @@ This project was developed to streamline the registration process for our church
 
 ## Documentation
 `/` - Homepage
-<img src="<Documentations/Version 1/EAQC - 1 Homepage.jpg>" alt="Homepage" width="100"/>
+<img src="Documentations/Version 1/EAQC - 1 Homepage.jpg" alt="Homepage" width="300"/>
 
 `/event/<event>` - Event Sign-up Page
-<img src="<Documentations/Version 1/EAQC - 2 Signup.jpg>" alt="Event Sign-up" width="100"/>
+<img src="Documentations/Version 1/EAQC - 2 Signup.jpg" alt="Event Sign-up" width="300"/>
 
 After successful registration, the attendee receives a QR code.
-<img src="<Documentations/Version 1/EAQC - 3 Sucessfully Generated.jpg>" alt="Generated QR" width="100"/>
+<img src="Documentations/Version 1/EAQC - 3 Sucessfully Generated.jpg" alt="Generated QR" width="300"/>
 
 `/scan` - Organizers can use the QR Code Scanner to record attendance.
+
 ![Scan QR](<Documentations/Version 1/EAQC - 4 Scan QR.png>)
 [Watch the recording](https://drive.google.com/file/d/1Kvn_RkMkA3HMsbwoCneshM8K6XmsIWxa/view?usp=sharing)
 
