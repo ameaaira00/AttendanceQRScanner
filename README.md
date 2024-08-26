@@ -11,6 +11,25 @@ This project was developed to streamline the registration process for our church
 - **QR Code Scanning:** Allows us to scan QR codes to record attendance quickly.
 - **Admin Dashboard:** Admins can view a list of events and see the attendees who were scanned at each event.
 
+## Documentation
+`/` - Homepage
+![Homepage](<Documentations/Version 1/EAQC - 1 Homepage.jpg>)
+
+`/event/<event>` - Event Sign-up
+![Event Sign-up](<Documentations/Version 1/EAQC - 2 Signup.jpg>)
+
+After successful registration, the attendee receives a QR code.
+![QR Code Generated](<Documentations/Version 1/EAQC - 3 Sucessfully Generated.jpg>)
+
+`/scan` - Organizers can use the QR Code Scanner to record attendance.
+<video controls src="Documentations/Version 1/EAQC - 4 Scan QR.mp4" title="Title"></video>
+
+`/admin` - Admin Dashboard to view event details and attendee scans. Note that this has still no admin authentication.
+![Admin Dashboard](<Documentations/Version 1/EAQC - 5 Admin.png>)
+
+`/admin/<event>` - Event attendance details.
+![Attendance](<Documentations/Version 1/EAQC - 6 Admin Event Attendance.png>)
+
 ## Tools Used
 
 - **[Flask](https://flask.palletsprojects.com/):** A web framework for Python that helps in building web applications. It handles routing, rendering pages, and processing form data.
@@ -20,6 +39,8 @@ This project was developed to streamline the registration process for our church
 - **[SQLite](https://www.sqlite.org/index.html):** A lightweight database used to store participant and scan data. It is used here to manage and retrieve information about attendees and their scans.
 
 - **[HTML5 QR Code Scanner](https://github.com/mebjas/html5-qrcode):** A JavaScript library for scanning QR codes directly from the web browser. It is used to read QR codes from the webcam.
+
+- **[Heroku](https://www.heroku.com/):** A cloud platform that enables deployment of web applications. It is used to host the application online. The app is deployed at https://attendanceqrcode-flask-app-9e2f6557c363.herokuapp.com/.
 
 ## Installation
 
@@ -55,7 +76,7 @@ This project was developed to streamline the registration process for our church
    python app.py
    ```
 
-## Usage
+## Local Usage
 
 - **Access the Web Application:** Open your web browser and go to `http://127.0.0.1:5000`.
 - **Register for an Event:** Choose an event and sign up to receive your QR code.
