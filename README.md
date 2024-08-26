@@ -61,6 +61,7 @@ This project was developed to streamline the registration process for our church
 
 - **Dyno Management**: Before deploying the site, I needed to configure dyno settings. I opted to use basic dynos to avoid additional costs. The dyno type can be toggled as needed for scaling.
 
+- **Data Persistence Issue**: Every time I deployed the application using `git push heroku main`, the SQLite database was refreshed, which cleared out existing data, including scanned participants and signed-up attendees. This may indicate that for applications requiring persistent data, using a database service compatible with Heroku or configuring data persistence strategies is crucial.
 
 ## Installation
 
